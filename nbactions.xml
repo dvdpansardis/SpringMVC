@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+        <action>
+            <actionName>CUSTOM-RunProject</actionName>
+            <displayName>RunProject</displayName>
+            <goals>
+                <goal>-Dmaven.tomcat.port=8181</goal>
+                <goal>-Dspring.profiles.active="dev"</goal>
+                <goal>tomcat7:run-war</goal>
+            </goals>
+            <properties>
+                <jpda.listen>maven</jpda.listen>
+            </properties>
+        </action>
+        <action>
+            <actionName>test</actionName>
+            <packagings>
+                <packaging>*</packaging>
+            </packagings>
+            <goals>
+                <goal>test</goal>
+            </goals>
+            <properties>
+                <jpda.listen>maven</jpda.listen>
+            </properties>
+        </action>
+        <action>
+            <actionName>CUSTOM-TestProjetct</actionName>
+            <displayName>TestProjetct</displayName>
+            <goals>
+                <goal>test</goal>
+            </goals>
+            <properties>
+                <jpda.listen>maven</jpda.listen>
+            </properties>
+        </action>
+        
+    </actions>
